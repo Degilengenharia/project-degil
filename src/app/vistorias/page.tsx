@@ -463,25 +463,13 @@ export default function Inspections() {
             Ver modelo de Saída
           </LinkComponent>
 
-          <h2 className="self-start mt-10 mb-2 text-xl text-secondary font-bold">Tabela de Comercialização para vistorias residenciais e comerciais:</h2>
-
-          <ul className="list-disc list-inside text-primary pl-10">
-            <li><strong>Vistoria avulsa:</strong> Imóveis sem mobília até 60 m² valor R$ 100,00, acima de 60m², adicione R$1,00 por m².</li>
-
-            <ul className="list-disc list-inside text-primary pl-10"><strong>Adicionais:</strong>
-              <li><strong>Semimobiliado:</strong> 20%</li>
-              <li><strong>Mobiliado:</strong> 50%</li>
-              <li><strong>Com área externa (pátios):</strong> 20%</li>
-              <li><strong>Deslocamento:</strong> Em Porto alegre não será cobrado adicional se o trajeto imobiliária-imóvel-imobiliária for menor ou igual a 10km. Se exceder, será cobrado R$1,00 por km e se não for possível realizar a vistoria devido falta de chaves na agência
-                ou chaves não abrirem o imóvel será cobrado R$15,00 devido tempo e gasolina gastos.</li>
-            </ul>
-          </ul>
+      
 
         </div>
 
         <div className="w-full max-w-3xl mt-10 grid gap-x-10 p-5 bg-slate-50 rounded-sm shadow-md xs:grid-cols-8">
 
-          <h2 className="text-xl text-center text-secondary font-bold xs:col-span-8">Faça uma simulação</h2>
+          <h2 className="text-xl text-center text-secondary font-bold xs:col-span-8">Solicite uma vistoria</h2>
 
           <h2 className="text-lg mb-1 xs:col-span-8">Dados pessoais</h2>
 
