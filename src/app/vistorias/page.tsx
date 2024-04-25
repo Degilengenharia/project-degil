@@ -67,7 +67,7 @@ const schema = z.object({
   stateCity: z.string(),
   requesterPassword: z.string()
     .min(5, { message: "Senha incorreta" }).transform((value) => value.trim())
-    .refine((value) => value !== 'd3gil', { message: "Senha incorreta" }),
+    .refine((value) => value === 'd3gil', { message: "Senha incorreta" }),
 })
 
 export type FormDataProps = z.infer<typeof schema>
