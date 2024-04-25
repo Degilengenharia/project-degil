@@ -65,6 +65,9 @@ const schema = z.object({
     .refine((value) => optionsInspectionType.some((option) => option.value === value)),
   comments: z.string(),
   stateCity: z.string(),
+  requesterPassword: z.string()
+    .min(5, { message: "Senha incorreta" }).transform((value) => value.trim())
+    .refine((value) => value !== 'd3gil', { message: "Senha incorreta" }),
 })
 
 export type FormDataProps = z.infer<typeof schema>
@@ -705,6 +708,15 @@ export default function Inspections() {
             {...register("comments")}
           />
 
+          <Input
+            disabled={openNotifications.open}
+            label="Palavra chave"
+            placeholder="Digite a palavra chave"
+            classNameDiv="xs:col-span-8"
+            helperText={errors?.requesterPassword?.message}
+            {...register("requesterPassword")}
+          />
+          
           <ButtonComponent
             disabled={openNotifications.open}
             onClick={() => handleSubmit(handleCalculateInspectionPrice)()}
